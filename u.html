@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loyola Institutes of Technology and Management - Gallery</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9; /* Light background color */
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header Styling */
+    header {
+      background-color: #4CAF50; /* Green background for header */
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background-color: #333; /* Dark navigation bar */
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      position: sticky;
+      top: 60px; /* Below the header */
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #4CAF50; /* Light green hover effect */
+      color: white;
+    }
+
+    /* Category Buttons */
+    .categories {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .categories button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .categories button:hover {
+      background-color: #3e8e41;
+    }
+
+    /* Gallery Section */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05); /* Slight zoom effect on hover */
+    }
+
+    /* Hidden Images */
+    .hidden {
+      display: none;
+    }
+
+    /* Footer Styling */
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Our Gallery</h1>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="abo.html">About</a>
+    <a href="q.html">Skill Hub</a>
+    <a href="addm.html">Admissions</a>
+    <a href="con.html">Contacts</a>
+    <a href="creator.html">Creator</a>
+  </nav>
+
+  <!-- Category Buttons -->
+  <div class="categories">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('campus-life')">Campus Life</button>
+    <button onclick="filterImages('sports')">Sports</button>
+    <button onclick="filterImages('cultural-events')">Cultural Events</button>
+    <button onclick="filterImages('workshops')">Workshops</button>
+  </div>
+
+  <!-- Gallery Section -->
+  <section class="gallery">
+    <img src="https://i.imgur.com/bm5kGH7.jpeg" alt="Campus Life" class="campus-life">
+    <img src="https://i.imgur.com/B6NJjjQ.jpeg" alt="Sports" class="sports">
+    <img src="https://i.imgur.com/ldy5OyW.jpeg" alt="Cultural Events" class="cultural-events">
+    <img src="https://i.imgur.com/YdYG9Jt.jpeg" alt="Workshops" class="workshops">
+    <img src="https://i.imgur.com/HY6qMYu.jpeg" alt="Campus Life" class="campus-life">
+    <img src="https://i.imgur.com/Drb8ji9.jpeg" alt="Sports" class="sports">
+    <img src="https://i.imgur.com/lH0xGXY.jpeg" alt="Cultural Events" class="cultural-events">
+    <img src="https://i.imgur.com/HWUsvD8.jpeg" alt="Workshops" class="workshops">
+    <img src="https://i.imgur.com/9KFOKwL.jpeg" alt="Campus Life" class="campus-life">
+    <img src="https://i.imgur.com/NWIgxqE.jpeg" alt="Sports" class="sports">
+    <img src="https://i.imgur.com/YWbq6m2.jpeg" alt="Cultural Events" class="cultural-events">
+    <img src="https://i.imgur.com/z4Z24YW.jpeg" alt="Workshops" class="workshops">
+    <img src="https://i.imgur.com/ZSUGbCA.jpeg" alt="Campus Life" class="campus-life">
+    <img src="https://i.imgur.com/qbJS9ys.jpeg" alt="Sports" class="sports">
+    <img src="https://i.imgur.com/eDMU5f0.jpeg" alt="Cultural Events" class="cultural-events">
+    <img src="https://i.imgur.com/WbUDHwK.jpeg" alt="Workshops" class="workshops">
+    <img src="https://i.imgur.com/Wp8D3dQ.jpeg" alt="Campus Life" class="campus-life">
+    <img src="https://i.imgur.com/pHSuNGZ.jpeg" alt="Sports" class="sports">
+    <img src="https://i.imgur.com/P36ZIoF.jpeg" alt="Cultural Events" class="cultural-events">
+    <img src="https://i.imgur.com/wIdFWXU.jpeg" alt="Workshops" class="workshops">
+    <img src="https://i.imgur.com/UBCrZnA.jpeg" alt="Campus Life" class="campus-life">
+    <img src="https://i.imgur.com/ELRjM1C.jpeg" alt="Sports" class="sports">
+    <img src="https://i.imgur.com/mkqxHQE.jpeg" alt="Cultural Events" class="cultural-events">
+    <img src="https://i.imgur.com/D0BrEl2.jpeg" alt="Workshops" class="workshops">
+    <img src="https://i.imgur.com/EshRITp.jpeg" alt="Campus Life" class="campus-life">
+    <img src="https://i.imgur.com/sswt4xa.jpeg" alt="Sports" class="sports">
+    <img src="https://i.imgur.com/Ax8UzqW.jpeg" alt="Cultural Events" class="cultural-events">
+    <img src="https://i.imgur.com/GcSRi8j.jpeg" alt="Workshops" class="workshops">
+    <img src="https://i.imgur.com/VnfyeGK.jpeg" alt="Campus Life" class="campus-life">
+    <img src="https://i.imgur.com/Mnz4L5p.jpeg" alt="Sports" class="sports">
+    <img src="https://i.imgur.com/8BkPbOk.jpeg" alt="Cultural Events" class="cultural-events">
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2023 Loyola Institutes of Technology and Management
+  </footer>
+
+  <!-- JavaScript for Filtering Images -->
+  <script>
+    function filterImages(category) {
+      const images = document.querySelectorAll('.gallery img');
+      images.forEach(image => {
+        if (category === 'all' || image.classList.contains(category)) {
+          image.classList.remove('hidden');
+        } else {
+          image.classList.add('hidden');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
